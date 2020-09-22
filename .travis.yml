@@ -13,5 +13,5 @@ jdk:
 
 after_success:
   - cd src/main/java/api
-  - javac UpdateSheet.java
-  - java UpdateSheet
+  - mvn compile
+  - mvn exec:java -Dexec.mainClass="api.UpdateSheet"

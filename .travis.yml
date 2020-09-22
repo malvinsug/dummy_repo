@@ -12,6 +12,6 @@ jdk:
   - openjdk11
 
 after_success:
-  - cd main/java/api
+  - cd src/main/java/api
   - javac UpdateSheet.java
   - java UpdateSheet

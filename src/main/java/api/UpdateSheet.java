@@ -57,7 +57,7 @@ public class UpdateSheet {
   public static void main(String[] args) throws IOException, GeneralSecurityException {
     sheetsService = getSheetsService();
     //readSpreadsheet();
-    writeSpreadsheet();
+    writeSpreadsheet(args);
   }
 
   private static void readSpreadsheet() throws IOException {
@@ -80,10 +80,10 @@ public class UpdateSheet {
 
   }
 
-  private static void writeSpreadsheet() throws IOException {
+  private static void writeSpreadsheet(String[] args) throws IOException {
     ValueRange appendBody = new ValueRange()
             .setValues(Arrays.asList(
-                    Arrays.asList("Write","Something","Here")
+                    Arrays.asList(args[0],args[1],args[2])
             ));
 
     AppendValuesResponse appendResult = sheetsService.spreadsheets().values()

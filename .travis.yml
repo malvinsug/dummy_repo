@@ -13,4 +13,4 @@ jdk:
 
 after_success:
   - mvn compile
-  - mvn exec:java -Dexec.mainClass="api.UpdateSheet"
+  - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="Malvin Sugiri TRAVIS_TEST_RESULT"

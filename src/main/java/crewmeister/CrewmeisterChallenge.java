@@ -16,8 +16,8 @@ public class CrewmeisterChallenge {
      * }
      * return reversedWord.toString();
      */
-    String reversedWord = "";
-    return reversedWord;
+    //String reversedWord = "";
+    return reversedWord.toString();
   }
 
 }

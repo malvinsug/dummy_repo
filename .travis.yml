@@ -16,8 +16,8 @@ before_install:
 
 after_success:
   - mvn compile
-  - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME Sugiri SUCCESSFUL"
+  - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME SUCCESSFUL"
 
 after_failure:
   - mvn compile
-  - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME Sugiri FAILED"
+  - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME FAILED"

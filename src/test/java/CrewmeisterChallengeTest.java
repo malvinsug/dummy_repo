@@ -63,7 +63,7 @@ public class CrewmeisterChallengeTest {
   @Test
   public void stringWithEnterSymbolTest() {
     // string with \n
-    word = "zs6e\nC2sJ6k";
+    word = "zs6e\nC2sJ5k";
     wordBuilder = new StringBuilder(word);
 
     actual = CrewmeisterChallenge.crewmeisterRevert(word);

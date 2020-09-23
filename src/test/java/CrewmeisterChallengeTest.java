@@ -41,7 +41,7 @@ public class CrewmeisterChallengeTest {
   @Test
   public void randomCharactersTest() {
     // random characters
-    word = "zS6eC2sJ6k";
+    word = "zS6eC2wJ65";
     wordBuilder = new StringBuilder(word);
 
     actual = CrewmeisterChallenge.crewmeisterRevert(word);

@@ -8,16 +8,18 @@ dist: xenial
 language: java
 
 jdk:
-  - openjdk8
   - openjdk11
 
 before_install:
+  # Get author name for the test report
   - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
 
 after_success:
+  # the following commands build the UpdateSheet.java file and report a successful test.
   - mvn compile
   - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME SUCCESSFUL"
 
 after_failure:
+  # the following commands build the UpdateSheet.java file and report a failed test.
   - mvn compile
   - mvn exec:java -Dexec.mainClass="api.UpdateSheet" -Dexec.args="$AUTHOR_NAME FAILED"
